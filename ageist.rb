@@ -1,3 +1,11 @@
+# Loved that you used methods to encapselate your logic, and that you are trying out tail conditions
+
+# A traditional if/else statement would be more approriate for this kind of problem
+# It is much harder to read and understand with tail conditions since it is possible for each statement
+# to be evaluated separately.
+# 
+# In a traditional if/elseif type of a statement you would only have to test the upper bound after the first
+# branch of the if statement, which leads to less logic
 def ageist(age)
   puts "baby, #{age}" if age <= 1
   puts "child, #{age}" if age > 1 && age < 10
@@ -23,6 +31,6 @@ def ageist2(age)
 end
 
 puts "\nStarting original version..."
-10.times { ageist(rand(110)) }
+10.times { ageist(rand(110)) } # rand(110) does not exercise the full range
 puts "\nStarting case statement version..."
 10.times { ageist2(rand(110)) }
